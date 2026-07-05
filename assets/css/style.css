@@ -279,6 +279,33 @@ select:focus-visible {
   margin-top: var(--espaco-3);
 }
 
+.hero-destaques {
+  list-style: none;
+  margin: var(--espaco-3) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+  max-width: 58ch;
+}
+
+.hero-destaques li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--texto-principal);
+  font-weight: 500;
+}
+
+.hero-destaques li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--verde-folha);
+}
+
 .hero-visual {
   position: relative;
   display: flex;
@@ -389,6 +416,10 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--espaco-3);
+}
+
+.cartoes-valores {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .cartao {
@@ -622,6 +653,10 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 
+  .cartoes-valores {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .lista-documentos {
     grid-template-columns: 1fr 1fr;
   }
@@ -658,6 +693,10 @@ section {
   }
 
   .cartoes {
+    grid-template-columns: 1fr;
+  }
+
+  .cartoes-valores {
     grid-template-columns: 1fr;
   }
 
